@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>オンラインコードエディタ</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
 </head>
 <body>
+    <header class="main-header">
+        <h1>オンラインコードエディタ</h1>
+        <div class="header-controls">
+            <button id="theme-toggle" class="theme-button">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
     <div class="container">
         <div class="editor-container">
             <div class="tab-container">
                 <button class="tab-button active" data-mode="javascript">JavaScript</button>
                 <button class="tab-button" data-mode="python">Python</button>
                 <button class="tab-button" data-mode="ruby">Ruby</button>
+                <button class="tab-button" data-mode="c">C</button>
+                <button class="tab-button" data-mode="cpp">C++</button>
+                <button class="tab-button" data-mode="csharp">C#</button>
+                <button class="tab-button" data-mode="java">Java</button>
+                <button class="tab-button" data-mode="php">PHP</button>
+                <button class="tab-button" data-mode="lua">Lua</button>
                 <button class="tab-button" data-mode="html">HTML</button>
             </div>
             <textarea id="code-editor" placeholder="ここにコードを入力してください..."></textarea>
@@ -24,6 +39,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ruby-wasm-wasi@0.1.0/dist/browser.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wasmoon@1.15.1/dist/wasmoon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/php-wasm@0.0.7/dist/php-wasm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@wasmer/wasi@1.2.2/lib/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tcc-web@0.1.0/tcc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/blazor.webassembly@6.0.0/blazor.webassembly.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
