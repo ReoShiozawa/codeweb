@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>オンラインコードエディタ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="editor-container">
+            <div class="tab-container">
+                <button class="tab-button active" data-mode="javascript">JavaScript</button>
+                <button class="tab-button" data-mode="python">Python</button>
+                <button class="tab-button" data-mode="ruby">Ruby</button>
+                <button class="tab-button" data-mode="html">HTML</button>
+            </div>
+            <textarea id="code-editor" placeholder="ここにコードを入力してください..."></textarea>
+            <button id="run-button">実行</button>
+        </div>
+        <div class="output-container">
+            <div id="output">実行結果がここに表示されます</div>
+            <div id="preview" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ruby-wasm-wasi@0.1.0/dist/browser.esm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
